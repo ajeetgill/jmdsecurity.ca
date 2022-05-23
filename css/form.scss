@@ -62,6 +62,8 @@ $success-bg: hsla(120, 100%, 80%, 0.9);
     &__form {
       grid-template-columns: max-content 400px;
       gap: 1em;
+      position: relative;
+      left: -6.5%;
     }
     &__input_field {
       max-width: 450px;

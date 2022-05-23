@@ -59,6 +59,8 @@
         grid-template-columns: -webkit-max-content 400px;
         grid-template-columns: max-content 400px;
     gap: 1em;
+    position: relative;
+    left: -6.5%;
   }
   .get-quote__input_field {
     max-width: 450px;
