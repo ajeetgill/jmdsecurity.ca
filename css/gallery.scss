@@ -1,0 +1,66 @@
+// Above the fold
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+// .container--gallery {
+//   display: grid;
+//   max-width: 992px;
+//   margin: auto;
+// }
+.gallery {
+  // display: grid;
+  min-height: 70vh;
+  padding: 1em;
+  columns: 2; 
+  overflow: hidden;
+  break-inside: avoid;
+  gap: 0;
+
+  &__thumb {
+    border-radius: 5px;
+    // object-fit: cover;
+    padding: .5rem;
+    margin-bottom: .5rem;
+  }
+  &__img--container {
+    text-align: center;
+    width: 100%;
+
+    img {
+      border-radius: 1rem;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &:nth-child(7n) img {
+        height: 250px;
+      }
+      &:nth-child(7n + 1) img {
+        height: 150px;
+      }
+      &:nth-child(7n + 2) img {
+        height: 200px;
+      }
+      &:nth-child(7n + 3) img {
+        height: 225px;
+      }
+      &:nth-child(7n + 4) img {
+        height: 275px;
+      }
+      
+  }
+}
+@media screen and (min-width: 600px) {
+  .gallery {
+    columns: 3;
+  }
+}
+@media screen and (min-width: 992px) {
+  .gallery {
+    columns: 4;
+  }
+}
+// Below the fold

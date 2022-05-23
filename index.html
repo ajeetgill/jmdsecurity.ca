@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JMD Security: Lower mainland</title>
+        <link rel="stylesheet" href="./css/main.css">
+
+
+        <!-- FB link preview card : jmdsecurity.ca -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="JMD Security">
+        <meta property="og:title" content="JMD Security: quality security at an affordable price">
+        <meta property="og:description"
+            content="We are based in Lower Mainland (and Surrey). We take pride in our services. Provide security so you can sleep without worries.">
+
+        <meta property="og:url" content="https://jmdsecurity.ca/">
+
+        <meta property="og:image" content="https://jmdsecurity.ca/assets/preview-card-01.jpg">
+        <meta property="og:image:alt"
+            content="The company (JMD Security) logo, with text which tells the areas the company serves which are Lower mainland & Interior Area. Some additional text which tells values - SAFETY, SECURITY, ASSISTANCE.">
+        <!-- image can be replaced with LOGO -->
+
+        <meta
+            content='We are Security Services Company based in Lower Mainland (Surrey). We take pride in our services. Provide security so you can sleep without worries. We make it happen.'
+            name='description'>
+
+
+        <!-- SEO stuff -->
+        <link rel="canonical" href="https://jmdsecurity.ca/" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="./assets/favicon.png">
+        <!--
+            Preconnecting is a way to tell the browser that it's expecting a connection to this URL
+            https://web.dev/uses-rel-preconnect/?utm_source=lighthouse&utm_medium=devtools
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script src="./libs/sweetalert.min.js" defer></script>
+        <link rel="preload" href="./libs/swiper-bundle.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+
+        <!-- https://web.dev/defer-non-critical-css/ -->
+        <link rel="preload" href="./css/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <!-- <link rel="preload" href="./css/gallery.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+        <link rel="preload" href="./css/form.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="./css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="./css/header.css">
+            <!-- <link rel="stylesheet" href="./css/gallery.css"> -->
+            <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="form.css">
+            <link rel="stylesheet" href="./libs/swiper-bundle.min.css" />
+        </noscript>
+
+        <style>
+            /* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap'); */
+
+            .swal-text {
+                padding: 17px;
+                display: block;
+                text-align: center;
+                color: #61534e;
+            }
+
+            .swal-overlay--show-modal {
+                backdrop-filter: grayscale(1) blur(4px);
+            }
+
+            /* <!-- Testimonials Container Test --> */
+            .swiper-container {
+                height: 300px;
+                width: 100%;
+                height: auto;
+                padding: 2em;
+                padding-top: 0;
+            }
+
+            .swiper-slide {
+                height: fit-content;
+            }
+
+            .swiper-button-prev {
+                left: 0;
+            }
+
+            .swiper-button-next {
+                right: 0;
+            }
+
+            .swiper-pagination-bullet {
+                background-color: white;
+            }
+
+            @media screen and (min-width: 992px) {
+                .swiper-container {
+                    /* width: 600px; */
+                    /* height: 300px; */
+                    width: 900px;
+                    height: auto;
+                    /* padding-top: 0; */
+                }
+
+            }
+        </style>
+        <!-- Google Tag Manager -->
+        <!-- <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P9B5DC7');</script> -->
+        <!-- End Google Tag Manager -->
+    </head>
+
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9B5DC7" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        <header id="home">
+
+            <a href="#" class="logo" id="logo"><img src="./assets/jmd-security-logo.png" alt="JMD Security logo"
+                    width="250"> <span class="logo__name">JMD <span>Security</span></span></a>
+            <img id="menu-open" src="./assets/menu-open.svg" alt="hamburger menu" width="40" height="40">
+            <nav id="mySideNav" class="sidenav">
+                <img id="menu-close" src="./assets/menu-close.svg" alt="hamburger closing menu" width="40" height="40">
+                <ul>
+                    <li onclick="closeMenu()"><a href="#home">home</a>
+                    </li>
+                    <!-- <li onclick="closeMenu()"><a href="#projects" onclick="focusOnMe(this)">our work</a>
+                    </li> -->
+                    <li onclick="closeMenu()"><a href="#services">services</a>
+                    </li>
+                    <li onclick="closeMenu()"><a href="#about" onclick="focusOnMe(this)">About us</a>
+                    </li>
+                    <li onclick="closeMenu()"><a href="#contact-form" onclick="focusOnMe(this)">contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main>
+            <div class="fab_btns">
+                <ul class="fab_btns__container">
+                    <li class="fab_btns__btn"><a id="js-log-email" class="js-ga4-fab-event" href="#contact-form"
+                            onclick="focusOnMe(this); logContact(this);">Email
+                            Us</a></li>
+                    <li class="fab_btns__btn"><a id="js-log-phone" class="js-ga4-fab-event" href="tel:+17787130639"
+                            onclick="logContact(this);">Call Us</a></li>
+                </ul>
+            </div>
+
+            <section class="hero" id="home">
+                <div class="hero__container">
+
+                    <div>
+                        <h1 class="hero__company-name"><span class="hero__company-name--main">JMD</span><br><span
+                                class="hero__company-name--min">Security Services</span></h1>
+                        <p class="hero__sub-heading">Quality at an affordable price<br>
+                            Securing clients in Lower Mainland</p>
+                    </div>
+                    <br>
+                    <p class="hero__tagline">
+                        <span>JMD Security was founded to fill the void for qualified security personnel in the Surrey
+                            area.</span>
+                        <br><br>
+                        <span>For moments when you want an excellent service without making a hole in your pocket.Top
+                            security companies often turn to us when they are short-staffed.
+                        </span>
+                    </p>
+                    <div class="hero__values">
+                        <p class="hero__value">ASSISTANCE.</p>
+                        <p class="hero__value">SECURITY.</p>
+                        <p class="hero__value">SAFETY.</p>
+                        <a class="hero__value hero__value--btn" href="#">VIEW ALL SERVICES</a>
+                    </div>
+                    <div class="hero__cta-container">
+                        <img class="hero__logo" src="./assets/jmd-security-logo.png" alt="">
+
+                        <a class="btn btn__primary" href="">HIRE US</a>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- <section id="services" class="container container--categories">
+                <h2 class="container__heading">Let's make your home more beautiful</h2>
+                <p class="container__para">
+                    Functional & Aesthetically pleasing
+                </p>
+                <p class="container__info">
+                    Railings, Patio Covers, & Gates are like accessories to your house.At the same time, these
+                    provide a safe
+                    place to hangout with your friends & families.
+                </p>
+                <article class="card card--first">
+                    <h2 class="card__heading">Patio Covers</h2>
+                    <img class="card__image" src="./img_jpg/thumbs/thumb-patio.jpeg" height="210" width="343" alt=""
+                        loading="lazy">
+                    <p class="card__para">There's nothing like sweet summer, having your friends over, & firing up that
+                        grill. Raincouver happens.<small><br>(Inner voice: Only if I had a covered patio.)<br></small>
+                        We make sure, the rain can't ruin your experience, by building beautiful and useable covers for
+                        your patios.</p>
+                    <a class="card__link" href="#projects">Check Projects</a>
+                </article>
+                <article class="card card--second">
+                    <h2 class="card__heading">Railings</h2>
+                    <img class="card__image" src="./img_jpg/thumbs/thumb-railing.jpeg" height="210" width="343" alt=""
+                        loading="lazy">
+                    <p class="card__para">Wonder how a ladder and stairs serve the same purpose. The Ladder can be scary
+                        but
+                        not the stairs.<br>
+                        We make sure you feel that sense of protection, with beautiful and sturdy railings.</p>
+                    <a class="card__link" href="#projects">Check Projects</a>
+                </article>
+                <article class="card card--third">
+                    <h2 class="card__heading">Gates</h2>
+                    <img class="card__image" src="./img_jpg/thumbs/thumb-gate.jpeg" height="210" width="343" alt=""
+                        loading="lazy">
+                    <p class="card__para">Ever heard of a fortress without a sturdy gate? Yes, neither have we.<br>
+                        We build doors/gates that offer first line of defense, for years.<br>
+                        While we're at it, we make sure it looks beautiful too.</p>
+                    <a class="card__link" href="#projects">Check Projects</a>
+                </article>
+            </section> -->
+
+            <!-- <section class="container">
+                <h2 class="container__heading">Word on street</h2>
+                <p class="container__para">is that we really nail it. Read what our customers have to say about us</p>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper gallery--testimonial">
+                        <article class="card--testimonial swiper-slide">
+                            <img src="./testimonial_pics/railing_made_for_irena_arcetic.jpeg" height="286" width="343"
+                                alt="" class="card--testimonial__image" loading="lazy">
+                            <h2 class="card--testimonial__heading"><span>Job :</span> Picket Railing</h2>
+                            <p class="card--testimonial__para">Hey, thank you so much. So far looks amazing. Will
+                                definitely recommend your work.</p>
+                            <div class="card--testimonial__user-details">
+                                <img class="" src="./assets/female-avatar.svg" alt="" loading="lazy" height="48"
+                                    width="48">
+                                <span>Irena Marcetic</span>
+                            </div>
+                        </article>
+
+
+                        <article class="card--testimonial swiper-slide">
+                            <img src="./testimonial_pics/glass_patio_cover_made_for_nathanj.jpeg" height="286"
+                                width="343" alt="" class="card--testimonial__image" loading="lazy">
+                            <h2 class="card--testimonial__heading"><span>Job :</span> Glass Patio Cover</h2>
+                            <p class="card--testimonial__para"> Thank you guys. You did a great job. I would highly
+                                recommend you to my friends and family.</p>
+                            <div class="card--testimonial__user-details">
+                                <img class="" src="./assets/male-avatar.svg" alt="" loading="lazy" height="48"
+                                    width="48">
+                                <span>Nathan J</span>
+                            </div>
+                        </article>
+
+                        <article class="card--testimonial swiper-slide">
+                            <img src="./testimonial_pics/patio_cover_made_for_stephy.jpeg" height="286" width="343"
+                                alt="" class="card--testimonial__image" loading="lazy">
+                            <h2 class="card--testimonial__heading"><span>Job :</span> Patio Cover</h2>
+                            <p class="card--testimonial__para">WOW! so impressed
+                                with our new patio cover, these guys did great work, they were quick and very
+                                friendly, I highly recommend them for your next project.</p>
+                            <div class="card--testimonial__user-details">
+                                <img class="" src="./assets/female-avatar.svg" alt="" loading="lazy" height="48"
+                                    width="48">
+                                <span>Stephy Garcia</span>
+                            </div>
+                        </article>
+
+                        <article class="card--testimonial swiper-slide">
+                            <img src="./testimonial_pics/gate_for_davinderjit_dhadda.jpeg" height="286" width="343"
+                                alt="" class="card--testimonial__image" loading="lazy">
+                            <h2 class="card--testimonial__heading"><span>Job :</span> Aluminum Gate</h2>
+                            <p class="card--testimonial__para">Highly recommended Nav and his team. They are very
+                                friendly and professional. They use high quality materials and install on time.</p>
+                            <div class="card--testimonial__user-details">
+                                <img class="" src="./assets/male-avatar.svg" alt="" loading="lazy" height="48"
+                                    width="48">
+                                <span>Davinderjit Dhadda</span>
+                            </div>
+                        </article>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <a class="card--testimonial__get-google-reviews" target="_blank"
+                    href="https://g.page/r/CTXwHtHwbe8LEAg/review">Leave Us a Google Review</a>
+            </section> -->
+
+
+            <section class="container services" id="services">
+                <h2 class="container__heading bg-element">Our Services
+                </h2>
+                <p class="container__para">Our security services consist of highly trained professionals with the
+                    experience and expertise to aid you in every possible situation.
+                </p>
+                <div class="services__list">
+                    <div class="services__item">
+                        <img src="./assets/services-construction.jpg" alt="">
+                        <p>Construction Sites</p>
+                    </div>
+                    <div class="services__item">
+                        <img src="./assets/services-commercial.jpg" alt="">
+                        <p>Commercial Security</p>
+                    </div>
+                    <div class="services__item">
+                        <img src="./assets/services-concierege.jpg" alt="">
+                        <p>Concierge</p>
+                    </div>
+                    <div class="services__item">
+                        <img src="./assets/services-valet.jpg" alt="">
+                        <p>Valet parking</p>
+                    </div>
+                    <div class="services__item">
+                        <img src="./assets/services-management.jpg" alt="">
+                        <p>Facilities Management
+                        </p>
+                    </div>
+                    <div class="services__item">
+                        <img src="./assets/services-event.jpg" alt="">
+                        <p>Event Security</p>
+                    </div>
+                    <div class="services__item">
+                        <img src="./assets/services-crowd.jpg" alt="">
+                        <p>Crowd/Traffic Control</p>
+                    </div>
+                    <div class="services__item">
+                        <img src="./assets/services-lp.jpg" alt="">
+                        <p>Loss Prevention
+                        </p>
+                    </div>
+                </div>
+                <div class="services__btns">
+                    <a href="" class="btn btn__primary">Book free consultation</a>
+                    <a href="" class="btn btn__secondary">Know More</a>
+                </div>
+            </section>
+
+            <section class="container about" id="about">
+                <h2 class="container__heading bg-element">Our Company
+                </h2>
+                <p class="container__para">We guard so you can rest easy.<br>Someone you can trust.
+                </p>
+
+                <div class="about__container">
+                    <p class="container__para">We have become one of the fastest growing security company. All because
+                        of
+                        the trust that our clients put in us. We value security above everything. Our belief is to
+                        provide
+                        excellent security irrespective of the cost.
+                        We guard so you can rest easy.
+                    </p>
+                    <div class="about__inner-container">
+                        <div class="hero__values about__values">
+                            <p class="hero__value">SAFETY.</p>
+                            <p class="hero__value">SECURITY.</p>
+                            <p class="hero__value">ASSISTANCE.</p>
+                        </div>
+                        <img class="about__logo" src="./assets/jmd-security-logo.png" alt="">
+                    </div>
+                </div>
+
+
+
+
+            </section>
+            <section class="container container__needs">
+                <h2 class="container__heading ">Licensed in British Columbia
+                </h2>
+                <div class="container__needs__inner-container">
+                    <div class="container__needs__item">
+                        <img src="./assets/el-guard.svg" alt="">
+                        <p>Need Guard?</p>
+                    </div>
+                    <div class="container__needs__item">
+                        <img src="./assets/el-tickets.svg" alt="">
+                        <p>Holding Events?</p>
+                    </div>
+                    <div class="container__needs__item">
+                        <img src="./assets/el-people.svg" alt="">
+                        <p>Finding Work?</p>
+                    </div>
+                </div>
+            </section>
+            <section class="container container--form" id="contact-form">
+                <h2 class="container__heading container__heading--get-quote-form get-quote__heading bg-element">Contact
+                    us for Quote
+                </h2>
+                <p class="container__para container__info--get-quote-form get-quote__para">Want to
+                    feel more
+                    secure? <br>Contact us today to get a
+                    free
+                    consultation.
+                </p>
+                <form name="getQuote" class="container get-quote get-quote__form" action="#" onsubmit="return"
+                    id="usrform">
+                    <label class="get-quote__label" for="name">full name :</label>
+                    <input class="get-quote__input_field" type="text" id="name" name="name" placeholder="John Doe"
+                        required>
+
+                    <label class="get-quote__label" for="email">email address :</label>
+                    <input class="get-quote__input_field" type="email" id="email" name="email" placeholder="abc@xyz.com"
+                        required>
+
+                    <label class="get-quote__label" for="phone">phone number :</label>
+                    <input class="get-quote__input_field" type="tel" id="phone" name="phone" placeholder="123-45-678"
+                        pattern="[0-9]{3}[0-9]{2}[0-9]{3}" required>
+                    <label class="get-quote__label" for="comment">message :</label>
+                    <textarea class="get-quote__input_field" rows="4" cols="25" id="comment" name="comment"
+                        form="usrform" placeholder="Enter text here..." required></textarea>
+
+                    <button class="get-quote__submit btn btn__primary" type="button" onclick="sendEmail_disabled();">Get
+                        Free
+                        Quote</button>
+                </form>
+            </section>
+
+
+        </main>
+
+
+        <footer id="footer" class="container footer">
+            <div class="footer__company">
+                <span class="footer__company--decoration"></span>
+                <img class="" src="./assets/jmd-security-logo.png" alt="JMD Security logo" width="50" loading="lazy">
+                <span class="footer__company--decoration"></span>
+
+            </div>
+            <p class="footer__info">We are a growing, reliable and accredited Security protection firm of dedicated
+                people based in Lower Mainland.
+            </p>
+            <p class="footer__info">Our goal is to provide exceptional quality service at afforable prices - every
+                single second of the day</p>
+
+            <p class="footer__info"><span>Currently serving</span><img src="./assets/location.svg"
+                    alt="locations we serve" loading="lazy" width="20" height="30"> Vancouver island, Lower mainland &
+                Interior Area</p>
+            <nav class="footer-extra">
+
+                <ul class="footer-extra__list">
+                    <li class="footer-extra__item">
+                        <a href="tel:+17787130639"><img src="./assets/phone.svg" alt="phone number" loading="lazy"
+                                width="30" height="30"> +1 778-000-1234</a>
+                    </li>
+                    <li class="footer-extra__item">
+                        <a href="https://www.instagram.com/jmd_security/"><img src="./assets/insta.svg"
+                                alt="instagram username" loading="lazy" width="30" height="30"> jmd_security</a>
+                    </li>
+                    <li class="footer-extra__item">
+                        <a href="#contact-form" onclick="focusOnMe(this)"><img src="./assets/email.svg" alt="email ID"
+                                loading="lazy" width="30" height="25"> contact@jmdsecurity.ca</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+        <!-- <li class="footer-extra__item"><a href="#">Careers</a></li>
+        <li class="footer-extra__item"><a href="#">Help</a></li>
+        <li class="footer-extra__item"><a href="#">Privacy Policy</a></li> -->
+
+        <!-- Scripts -->
+        <!-- FIREBASE:forshared -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- <script src="/__/firebase/8.6.8/firebase-app.js" defer></script> -->
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <!-- <script src="/__/firebase/8.6.8/firebase-analytics.js" defer></script> -->
+
+        <!-- Initialize Firebase -->
+        <!-- <script src="/__/firebase/init.js" defer></script> -->
+        <!-- <script src="./js/_init.js" defer></script> -->
+        <script src="./js/main.js" defer></script>
+
+
+        <!-- Libraries -->
+        <!-- smtp.js: for sending emails -->
+        <script src="./libs/smtp.js" defer></script>
+        <script src="./js/dev_smtp.js" defer></script>
+        <!-- Swiper: for testimonials -->
+        <!-- @todo: add defer -->
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script> -->
+        <!-- <script src="./libs/sweetalert.min.js" defer></script>
+        <link rel="preload" href="./libs/swiper-bundle.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="./libs/swiper-bundle.min.css" />
+        </noscript> -->
+        <!-- 
+        <script src="./libs/swiper-bundle.min.js" defer></script>
+        <script src="./js/dev_swiper.js" defer></script> -->
+
+
+        <!-- START: Baguette Box Gallery View -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"
+            integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg=="
+            crossorigin="anonymous" async defer></script> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"
+            integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ=="
+            crossorigin="anonymous" defer /> -->
+        <!-- <link rel="preload" href="./libs/baguetteBox.min.css" as="style"
+            onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="./libs/baguetteBox.min.css">
+        </noscript>
+        <script src="./libs/baguetteBox.min.js" defer></script> -->
+
+        <!-- <script>
+            window.addEventListener('load', function () {
+                baguetteBox.run('.gallery-all', {
+                    async: true,
+                    animation: 'slideIn'
+                });
+            });
+        </script> -->
+        <!-- END: Baguette Box Gallery View -->
+
+    </body>
+
+</html>
+
+
+<!--
+    @todo: BEM naming of the form element
+ -->
+<!--
+    @todo: Use avif, webp images and use jpeg as fallback.
+    Issues to solve:
+        - picture element doesn't lazy load the images.
+        - baugette box doesn't work picture element, works just with img tag. (but webp, avif and jpeg as fallback requires picture element)
+        - can use lazyload.js but no idea how that works with baugettebox. So didn't try.
+ -->
+
+<!--
+    @todo: URGENT
+    form Validation, should be able to send emails with empty field, though I'll get an error dialog.
+
+    but I should let them know, hey you're missing your email. And not reset the email if sending failed coz of something missing.
+
+    Or reset the form IFF sending was successful.
+ -->
+<!--
+    @todo: See more/ See less functionality in gallery, we don't need to show all the pics
+        https://www.sitepoint.com/implementing-show-moreless-functionality-with-pure-css/
+-->
+
+<!--
+    @todo: improve the baugette box: https://github.com/feimosi/baguetteBox.js#responsive-images
+
+    • can ignore images for filtering
+    • or use filter property
+    • responsive images
+    • or I can wrap images in different boxes & just run() on those boxes destoryin the old run()
+ -->
+
+<!--
+    @todo: improve the status of email dialog-box:
+    > Can use libraries
+    + since I don't need this js instantly, I can use defer, i.e. not give up perfomance although using library.
+        LOOK MORE INTO IT.
+    > https://sweetalert.js.org/
+    > https://sweetalert2.github.io/
+
+    • clicking anywhere outside of dialog should disable it
+    • option to call on the error-card
+    •
+ -->
+
+<!--
+    @todo: Maybe Add Animations from https://animate.style/
+-->

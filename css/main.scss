@@ -1,0 +1,617 @@
+$big-font-color: whitesmoke;
+$z-index-top: 5;
+$z-index-middle: 4;
+$z-index-bottom: 3;
+$alpha: 1;
+$border-radius: 5px;
+$success: hsla(120, 100%, 20%, 1);
+$success-bg: hsla(120, 100%, 80%, 0.9);
+// Start: Generic Stuff
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  color: $big-font-color;
+  margin-bottom: 1rem;
+}
+// h1,
+// h2,
+// h3,
+// #logo {
+//   font-family: "Libre Baskerville";
+// }
+
+.bg-element{
+  // background-image: url('../assets/bg-element.svg');
+  // background-repeat: repeat-x ;
+  // background-position: center;
+  background: #575400;
+  background: #978d0299;
+  padding: 0.8rem .8rem 0.4rem 0.8rem ;
+  border-top: 2px solid #fff600;
+  width: 95%;
+}
+
+.btn{
+  border-radius: $border-radius;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+
+  &__primary{
+    background-color: #FEF79C;
+    color: #1A1A1A;
+  }
+  &__secondary{
+    border: 1px solid #FEF79C;
+    color: #FEF79C;
+  }
+}
+// End: Generic Stuff
+
+.hero {
+  min-height: 100vh;
+  margin-bottom: 15vh;
+  margin-top: -15vh;
+  padding-top: 15vh;
+  // background: linear-gradient( transparent, black), url(../assets/hero-img.png) no-repeat;
+  background: linear-gradient( transparent, black), url('../assets/jmd-security-flex-point-security-5iGl-bCJN7A-unsplash\ \(2\).jpg') no-repeat;
+  background-position-x: 66%;
+  &__container{
+    background-color: rgba(255, 217, 0, 0.601);
+    background-color:rgba(254, 247, 156, 0.6);
+    
+    // min-height: 70vh;
+    display: grid;
+    margin: auto;
+    width: 90%;
+    max-width: 850px;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    padding: 1rem;
+    position: relative;
+  }
+  &__company-name{
+    margin: 0;
+    &--main{
+      font-size: 6rem;
+      font-weight: 900;
+    }
+    &--min{
+      font-size: 1.7rem;
+      position: relative;
+      top: -1.5rem;
+    }
+  }
+  &__sub-heading{
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    top: -1rem;
+  }
+
+  &__values{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .5rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+    p{
+      margin: 0;
+    }
+    a{
+      padding: 1rem 0rem;
+      color: gold;
+      color: black;
+  
+    }
+  }
+  &__logo{
+    max-width: 90px;
+    transform: scale(1.25);
+  }
+  &__cta-container{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -10%;
+    width: 90%;
+    margin-left: 5%;
+    a{
+      display: inline-block;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+      border-bottom-left-radius: 0px;
+    }
+  }
+  &__tagline {
+    margin: 0;
+  }
+  
+}
+
+.services{
+  padding-bottom: 5rem;
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
+    justify-content: space-around;
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+  &__item{
+    width: max-content;
+    position: relative;
+    p{
+      width: 95%;
+      left: 2.5%;
+      margin: auto;
+      position: absolute;
+      text-align: center;
+      padding: .5rem;
+      bottom: 1rem;
+      background-color: hsla(0, 0%, 10%, 0.6);
+      // background-color: rgba(26, 26, 26, 0.6);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &__btns{
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+
+  }
+}
+
+.about{
+  margin-bottom: 8rem;
+  &__inner-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+  }
+  &__logo{
+   margin-left: -2rem;
+   width: 12rem;
+   max-width: 300px;
+  }
+  &__values{
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    p{
+      margin: 0;
+      font-size: 2rem;
+    }
+    
+    
+  }
+}
+
+// Animations
+@keyframes blurbg {
+  0% {
+    backdrop-filter: blur(1px) brightness(100%);
+    clip-path: polygon(0 56%, 100% 56%, 100% 47%, 0 47%);
+    visibility: visible;
+  }
+  50% {
+    clip-path: polygon(0 27%, 100% 47%, 100% 71%, 0 85%);
+    backdrop-filter: blur(2px) brightness(80%);
+  }
+
+  75% {
+    clip-path: polygon(0 4%, 100% 10%, 100% 98%, 0 85%);
+  }
+  100% {
+    backdrop-filter: blur(3px) brightness(60%);
+    visibility: visible;
+  }
+}
+
+
+.container {
+  
+  &--categories {
+    display: grid;
+    
+
+    .card {
+      padding-bottom: 1em;
+      overflow: hidden;
+      transition: box-shadow 0.15s;
+      &:hover {
+        box-shadow: inset 0px 0px 120px -110px white;
+      }
+      &__para {
+        font-size: 0.8rem;
+        line-height: 1.8em;
+      }
+      &__image {
+        object-fit: cover;
+        object-position: 50% 50%;
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.container {
+  &__heading {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 900;
+    &--get-quote-form {
+      text-align: left;
+    }
+  }
+
+  &__para {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: .5rem 1rem;
+    text-align: left;
+  }
+  &__info {
+    text-align: center;
+    font-size: 0.8rem;
+    &--get-quote-form {
+      text-align: left;
+    }
+  }
+}
+.container__needs{
+  &__inner-container{
+    padding: 3.5rem 1rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+  }
+  &__item{
+    text-align: center;
+    img{
+      width: 60%;
+      max-width: 100px;
+    }
+  }
+
+}
+
+.card {
+  border: 2px hsla(0, 0, 30%, 1) solid;
+  border-radius: 5px;
+  padding: 2em 0.5em;
+  margin: .5em auto;
+  max-width: 500px;
+  &__heading {
+    text-decoration: underline;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__para {
+    padding-bottom: 1em;
+  }
+  &__link {
+    display: inline-block;
+    color: white;
+    border: 2px solid $big-font-color;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in;
+    text-decoration: none;
+    transition: font-weight 0.3s;
+  }
+  &__link::after {
+    content: "";
+    display: block;
+    background-color: white;
+    border-top: solid 2px white;
+    border-radius: 5px;
+    margin-top: 0.1em;
+    transition: all 0.3s;
+    opacity: 0;
+    width: 0;
+  }
+  &__link:hover::after {
+    margin-bottom: 0px;
+    opacity: 1;
+    width: 100%;
+  }
+  &__link:hover {
+    font-weight: 700;
+    background-color: rgb(85, 85, 85);
+  }
+}
+
+.card--testimonial {
+  border-radius: 5px;
+  padding: 0em .5em;
+  margin: 1em auto;
+  display: grid;
+  grid-template-areas:
+    "testimonial_image"
+    "testimonial_job_name"
+    "testimonial_para"
+    "client_details";
+  &__heading {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    grid-area: testimonial_job_name;
+    & span {
+      text-transform: uppercase;
+    }
+  }
+  &__image {
+    grid-area: testimonial_image;
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__para {
+    grid-area: testimonial_para;
+    padding-bottom: 1em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+    margin-bottom: 0;
+    q {
+      quotes: "“" "”" "'" "'";
+    }
+  }
+  &__user-details {
+    grid-area: client_details;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    img {
+      background-color: white;
+      width: 2em;
+      height: 2em;
+      border-radius: 100%;
+      border: 2px solid white;
+    }
+  }
+  &__get-google-reviews{
+    background: transparent;
+    color: rgba(255, 255, 255,.7);
+    // border: 1px solid #1a1a1a;
+    padding: 1em 1em;
+    text-align: center;
+    border-radius: 10px;
+    width: max-content;
+    margin: auto;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      // border: 1px solid rgba(255, 255, 255,.5);
+    }
+  }
+
+}
+
+// // Animations
+// @keyframes movebg {
+//   0% {
+//     overflow: hidden;
+//     // background-position: center center;
+//     // transform: scale(2);
+//     background-size: 500%;
+//     filter: blur(1px) brightness(100%);
+//     clip-path: polygon(0 56%, 100% 56%, 100% 47%, 0 47%);
+//     // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+//   }
+//   50% {
+//     // background-position: left center;
+//     // filter: blur(1px) brightness(100%);
+//     background-size: 400%;
+//     clip-path: polygon(0 27%, 100% 47%, 100% 71%, 0 85%);
+//   }
+
+//   75% {
+//   //   background-position: center center;
+//   //   filter: blur(3px) brightness(60%);
+//   background-size: 200%;
+//     clip-path: polygon(0 4%, 100% 10%, 100% 98%, 0 85%);
+
+//   }
+//   100% {
+//     // background-position: center center;
+//     filter: blur(3px) brightness(60%);
+//     // transform: scale(1);
+//     overflow: hidden;
+//     // clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+//     background-size: cover;
+//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+//   }
+// }
+
+.fab_btns {
+  position: sticky;
+  // top: 92.8vh;
+  //don't work: bug: when scrolling towards the home, the bottom bar of browser pops and hides bottom section of the screen which is FAB buttons
+  // https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html
+  // https://nicolas-hoizey.com/articles/2015/02/18/viewport-height-is-taller-than-the-visible-part-of-the-document-in-some-mobile-browsers/
+  // https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/
+
+  top: 93.2%;
+  right: 0;
+  z-index: 9;
+  height: 0;
+  &::after {
+    content: "Free Consultation";
+    display: block;
+    font-size: 0.7rem;
+    color: whitesmoke;
+    position: absolute;
+    padding: 0.5em;
+    padding-bottom: 0.3em;
+    background-color: rgb(255, 64, 64);
+    color: whitesmoke;
+    font-weight: 500;
+    top: -1em;
+    left: 10%;
+  }
+  &__container {
+    background-color: #FEF79C;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    padding: 0;
+    max-width: 650px;
+    justify-content: space-evenly;
+    // gap: 0.25rem;
+    list-style: none;
+    max-width: 1200px;
+
+    // border-radius: 25px 25px 0 0;
+  }
+
+  &__btn {
+    background-color: #303030;
+    width: 100%;
+    // background: red;
+    text-align: center;
+    // padding: 1rem;
+    &:first-child {
+      margin-right: 0.12rem;
+    }
+    &:last-child {
+      margin-left: 0.12rem;
+    }
+    a {
+      cursor: pointer;
+      width: 95%;
+      display: inline-block;
+      padding: 1.25em 1em;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+// ==========================  MEDIA QUERIES  =====================
+@media screen and (min-width: 690px) {
+  .container {
+    &__heading {
+      text-align: center;
+    }}  
+  .container-hero {
+    &__tagline {
+      font-size: 4rem;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .container__needs{
+    &__item{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .bg-element{
+    width: 100%;
+  }
+  .services{
+    &__btns{
+      flex-direction: row;
+    }}
+    .about{
+      &__container{
+        position: relative;
+        top: -4rem;
+        display: flex;
+        .container__para{
+          width: 75%;
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      &__inner-container{
+        justify-content: flex-end;
+      }
+      &__logo{
+        width:250px ;
+      }
+    }
+  
+  .card--testimonial {
+    padding: 1em 1.5em;
+    border: none;
+    grid-template-areas:
+      "testimonial_image testimonial_job_name"
+      "testimonial_image testimonial_para"
+      "testimonial_image client_details";
+    grid-template-rows: max-content max-content max-content;
+
+    &__image {
+      grid-area: testimonial_image;
+      width: auto;
+    }
+    &__heading {
+      grid-area: testimonial_job_name;
+    }
+    &__para {
+      grid-area: testimonial_para;
+    }
+    &__user-details {
+      grid-area: client_details;
+    }
+    &__heading {
+      margin-bottom: 0;
+    }
+    &__image {
+      margin-right: 1em;
+    }
+  }
+
+  .fab_btns {
+    &__container {
+      width: 70%;
+    }
+    &::after {
+      left: 20%;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .card {
+    margin: 1em;
+  }
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    &--categories {
+      // display: grid;
+      // color: $big-font-color;
+
+      // grid-template-rows: max-content auto max-content;
+      grid-template-areas:
+        "heading heading heading"
+        "info info info"
+        "para para para"
+        "card_first card_second card_third";
+    }
+  }
+}

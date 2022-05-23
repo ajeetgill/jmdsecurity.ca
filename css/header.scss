@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+// change alpha to 0, to get rid of unncessary background colors.
+$alpha: 0;
+$light-text: whitesmoke;
+// $alpha: 1;
+* {
+  font-family: Montserrat;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0, 10);
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  // max-width: 920px;
+  margin: .5em auto;
+  align-items: center;
+
+  background-color: rgba(0, 255, 255, $alpha);
+  .logo {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    background-color: rgba(95, 158, 160, $alpha);
+    text-decoration: none;
+    color: $light-text;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: auto 0;
+    z-index: 5;
+    img{
+      max-width: 4rem;
+      transform: scale(1.2);
+    }
+    &__name{
+      display: flex;
+      flex-direction: column;
+      span{
+        font-size: .75rem;
+      }
+    }
+  }
+  
+  img#menu-open {
+    background-color: rgba(250, 128, 114, $alpha);
+    cursor: pointer;
+    width: 2rem;
+    height: 100%;
+    z-index: 5;
+  }
+}
+
+nav.sidenav {
+  position: fixed;
+  background: black;
+  // opacity: .5;
+  top: 0;
+  right: 0; //this line added by me, coz as per DesignCourse code, the horizontal and vertical scroll bar still appeared.
+  width: 0;
+  height: 100%;
+  z-index: 8;
+  width: 0;
+  overflow-x: hidden;
+  transition: width .3s;
+  padding-top: 60px;
+  #menu-close {
+    background-color: rgba(250, 128, 114, $alpha);
+    position: absolute;
+    padding: 0.5em;
+    width: 1.5rem;
+    cursor: pointer;
+    right: 0.5rem;
+    top: 1.85rem;
+    // top: 0.5rem;
+    opacity: 0;
+    width: 1.5rem;
+    min-width: 45px;
+    height: auto;
+  }
+  ul {
+    list-style-type: none;
+    margin: 40% auto;
+    padding: 10%;
+    text-transform: capitalize;
+    display: grid;
+    justify-content: end;
+    gap: 2.5em;
+    justify-items: right;
+    
+
+    li {
+      opacity: 0;
+      width: max-content;
+      &::after {
+        display: block;
+        content: "";
+        border-top: 5px solid white;
+        position: relative;
+        top: 0px;
+        opacity: 0.3;
+        width: 0;
+        transition: width 0.2s;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      // Learned: it's 'li:hover::after' & not 'li::after:hover'
+    }
+
+    a {
+      color: $light-text;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      &:hover {
+        color: gray;
+        // font-size: 1.6rem;
+      }
+    }
+    span {
+      color: gray;
+      display: block;
+      // font-size: 0.75em;
+      margin-top: 10px;
+    }
+  }
+}
+.animation {
+  width: 100%;
+  #menu-close {
+    animation: show-x 0.2s 0.3s forwards;
+  }
+  li:nth-child(1) {
+    animation: moveUp 0.2s 0.4s forwards;
+  }
+  li:nth-child(2) {
+    animation: moveUp 0.2s 0.5s forwards;
+  }
+  li:nth-child(3) {
+    animation: moveUp 0.2s 0.6s forwards;
+  }
+  li:nth-child(4) {
+    animation: moveUp 0.2s 0.7s forwards;
+  }
+  li:nth-child(5) {
+    animation: moveUp 0.2s 0.9s forwards;
+    // ?? is it possible to like pass argument to animation so that every animation starts at the same time,
+    // instead of using delay but instead starts at the same time but from different Y-axis position.
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+// ?? passing arguments to animation?? possible?
+// Source: https://www.youtube.com/watch?v=4G9c5swUyOc&t=508s
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+@media screen and (min-width: 650px) {
+  header {
+    // width: 70vw;
+    min-width: 600px;
+    max-width: 1000px;
+    place-items: center;
+    place-content: center;
+    justify-content: space-between;
+    
+
+    img#menu-open {
+      display: none;
+    }
+
+    nav.sidenav {
+      // opacity: .5;
+      position: unset;
+      width: 100%;
+      width: max-content;
+      display: flex;
+      padding: unset;
+      background-color: unset;
+      #menu-close {
+        display: none;
+      }
+      ul {
+        margin: auto;
+        margin-right: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // font-size: 0.8rem;
+        place-content: center;
+        place-items: center;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+        background: #1a1a1a;
+        border-radius: 5px;
+        padding: 0.8rem;
+        width: 33vw;
+        
+
+        li {
+          opacity: 1;
+          
+          &::after {
+            display: none;
+          }
+        }
+
+        a {
+          font-weight: normal;
+          &::after {
+            content: "";
+            display: block;
+            border-top: 2px solid hsla(0, 0%, 100%, 0.7);
+            opacity: 0;
+            width: 0%;
+            transition: all 0.3s;
+          }
+
+          &:hover {
+            font-weight: bold;
+            color: whitesmoke;
+          }
+          &:hover::after {
+            // color: gray;
+            opacity: 1;
+            width: 100%;
+          }
+        }
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

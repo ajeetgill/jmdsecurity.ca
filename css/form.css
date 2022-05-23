@@ -1,0 +1,85 @@
+.container--form {
+  padding-bottom: 5vmin;
+  display: -ms-grid;
+  display: grid;
+  padding-bottom: 3rem;
+}
+
+.container--form > * {
+  padding: .5rem 1rem;
+}
+
+.get-quote {
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 2rem;
+  padding-top: 0;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  width: 100%;
+}
+
+.get-quote__input_field {
+  padding: 0.5em;
+  border-radius: 5px;
+  padding-left: 1em;
+  border: 2px solid gray;
+}
+
+.get-quote__label {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  padding: 1em 0.5em 0.5em 0;
+  margin-top: 0.5em;
+}
+
+.get-quote__submit {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 1rem 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  padding: 1rem 2rem;
+}
+
+.get-quote__submit:hover {
+  padding: 1rem 1.99rem;
+}
+
+@media screen and (min-width: 650px) {
+  .get-quote {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 2rem 4rem;
+  }
+  .get-quote__heading {
+    text-align: center;
+  }
+  .get-quote__para {
+    text-align: center;
+  }
+  .get-quote__form {
+    -ms-grid-columns: max-content 400px;
+        grid-template-columns: -webkit-max-content 400px;
+        grid-template-columns: max-content 400px;
+    gap: 1em;
+  }
+  .get-quote__input_field {
+    max-width: 450px;
+  }
+  .get-quote__submit {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+    grid-column: 1/-1;
+    grid-area: 5/2/6/-1;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+/*# sourceMappingURL=form.css.map */

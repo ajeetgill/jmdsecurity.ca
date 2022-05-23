@@ -1,0 +1,84 @@
+$success: hsla(120, 100%, 20%, 1);
+$success-bg: hsla(120, 100%, 80%, 0.9);
+
+.container {
+  &--form {
+    &>*{
+      padding: .5rem 1rem;
+    }
+    padding-bottom: 5vmin;
+    display: grid;
+    padding-bottom: 3rem;
+  }
+}
+
+.get-quote {
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 2rem;
+  padding-top: 0;
+  display: grid;
+  margin: auto;
+  width: 100%;
+
+  &__input_field {
+    padding: 0.5em;
+    border-radius: 5px;
+    padding-left: 1em;
+    border: 2px solid hsl(0, 0%, 50%);
+  }
+  &__label {
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    padding: 1em 0.5em 0.5em 0;
+    margin-top: 0.5em;
+  }
+  &__submit {
+    justify-self: center;
+    margin: 1rem 0;
+    transition: all .2s;
+    padding: 1rem 2rem;
+    &:hover {
+      // font-size: .9em;
+      padding: 1rem 1.99rem;
+    }
+  }
+
+  // light-mode
+  // background: mintcream;
+  // color: black;
+  // &__input_field {
+  //   border: 1px solid #c3c3c3;
+  //   color: #000;
+  // }
+}
+// ==========================  MEDIA QUERIES  =====================
+@media screen and (min-width: 650px) {
+  .get-quote {
+    width: max-content;
+    padding: 2rem 4rem;
+    // max-width: 650px;
+    &__heading {
+      text-align: center;
+    }
+    &__para {
+      text-align: center;
+    }
+    &__form {
+      grid-template-columns: max-content 400px;
+      gap: 1em;
+    }
+    &__input_field {
+      max-width: 450px;
+    }
+    &__submit {
+      width: max-content;
+      grid-row: 5/6;
+      grid-column: 1/-1;
+      grid-area: 5/2/6/-1;
+      padding-left: 4em;
+      padding-right: 4em;
+    }
+  }
+
+}
