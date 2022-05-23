@@ -59,7 +59,7 @@ html {
   min-height: 100vh;
   margin-bottom: 15vh;
   margin-top: -15vh;
-  padding-top: 15vh;
+  padding-top: 12vh;
   // background: linear-gradient( transparent, black), url(../assets/hero-img.png) no-repeat;
   background: linear-gradient( transparent, black), url('../assets/jmd-security-flex-point-security-5iGl-bCJN7A-unsplash\ \(2\).jpg') no-repeat;
   background-position-x: 66%;
@@ -187,7 +187,7 @@ html {
   }
   &__logo{
    margin-left: -2rem;
-   width: 12rem;
+   width: 11rem;
    max-width: 300px;
   }
   &__values{
@@ -279,6 +279,8 @@ html {
   }
 }
 .container__needs{
+  padding: 1rem;
+    
   &__inner-container{
     padding: 3.5rem 1rem;
       display: flex;
@@ -556,35 +558,35 @@ html {
       }
     }
   
-  .card--testimonial {
-    padding: 1em 1.5em;
-    border: none;
-    grid-template-areas:
-      "testimonial_image testimonial_job_name"
-      "testimonial_image testimonial_para"
-      "testimonial_image client_details";
-    grid-template-rows: max-content max-content max-content;
+  // .card--testimonial {
+  //   padding: 1em 1.5em;
+  //   border: none;
+  //   grid-template-areas:
+  //     "testimonial_image testimonial_job_name"
+  //     "testimonial_image testimonial_para"
+  //     "testimonial_image client_details";
+  //   grid-template-rows: max-content max-content max-content;
 
-    &__image {
-      grid-area: testimonial_image;
-      width: auto;
-    }
-    &__heading {
-      grid-area: testimonial_job_name;
-    }
-    &__para {
-      grid-area: testimonial_para;
-    }
-    &__user-details {
-      grid-area: client_details;
-    }
-    &__heading {
-      margin-bottom: 0;
-    }
-    &__image {
-      margin-right: 1em;
-    }
-  }
+  //   &__image {
+  //     grid-area: testimonial_image;
+  //     width: auto;
+  //   }
+  //   &__heading {
+  //     grid-area: testimonial_job_name;
+  //   }
+  //   &__para {
+  //     grid-area: testimonial_para;
+  //   }
+  //   &__user-details {
+  //     grid-area: client_details;
+  //   }
+  //   &__heading {
+  //     margin-bottom: 0;
+  //   }
+  //   &__image {
+  //     margin-right: 1em;
+  //   }
+  // }
 
   .fab_btns {
     &__container {
@@ -602,16 +604,16 @@ html {
   .container {
     max-width: 1000px;
     margin: auto;
-    &--categories {
-      // display: grid;
-      // color: $big-font-color;
+  //   &--categories {
+  //     // display: grid;
+  //     // color: $big-font-color;
 
-      // grid-template-rows: max-content auto max-content;
-      grid-template-areas:
-        "heading heading heading"
-        "info info info"
-        "para para para"
-        "card_first card_second card_third";
-    }
+  //     // grid-template-rows: max-content auto max-content;
+  //   //   grid-template-areas:
+  //   //     "heading heading heading"
+  //   //     "info info info"
+  //   //     "para para para"
+  //   //     "card_first card_second card_third";
+  //   // }
   }
 }

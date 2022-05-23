@@ -45,7 +45,7 @@ html {
   min-height: 100vh;
   margin-bottom: 15vh;
   margin-top: -15vh;
-  padding-top: 15vh;
+  padding-top: 12vh;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black)), url("../assets/jmd-security-flex-point-security-5iGl-bCJN7A-unsplash (2).jpg") no-repeat;
   background: linear-gradient(transparent, black), url("../assets/jmd-security-flex-point-security-5iGl-bCJN7A-unsplash (2).jpg") no-repeat;
   background-position-x: 66%;
@@ -215,7 +215,7 @@ html {
 
 .about__logo {
   margin-left: -2rem;
-  width: 12rem;
+  width: 11rem;
   max-width: 300px;
 }
 
@@ -342,6 +342,10 @@ html {
 
 .container__info--get-quote-form {
   text-align: left;
+}
+
+.container__needs {
+  padding: 1rem;
 }
 
 .container__needs__inner-container {
@@ -619,42 +623,6 @@ html {
   .about__logo {
     width: 250px;
   }
-  .card--testimonial {
-    padding: 1em 1.5em;
-    border: none;
-        grid-template-areas: "testimonial_image testimonial_job_name" "testimonial_image testimonial_para" "testimonial_image client_details";
-    -ms-grid-rows: max-content max-content max-content;
-        grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content;
-        grid-template-rows: max-content max-content max-content;
-  }
-  .card--testimonial__image {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    -ms-grid-column: 1;
-    grid-area: testimonial_image;
-    width: auto;
-  }
-  .card--testimonial__heading {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: testimonial_job_name;
-  }
-  .card--testimonial__para {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: testimonial_para;
-  }
-  .card--testimonial__user-details {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: client_details;
-  }
-  .card--testimonial__heading {
-    margin-bottom: 0;
-  }
-  .card--testimonial__image {
-    margin-right: 1em;
-  }
   .fab_btns__container {
     width: 70%;
   }
@@ -670,9 +638,6 @@ html {
   .container {
     max-width: 1000px;
     margin: auto;
-  }
-  .container--categories {
-        grid-template-areas: "heading heading heading" "info info info" "para para para" "card_first card_second card_third";
   }
 }
 /*# sourceMappingURL=main.css.map */
