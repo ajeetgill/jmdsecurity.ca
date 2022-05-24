@@ -465,6 +465,27 @@ html {
   text-decoration: none;
 }
 
+#brownwest-branding {
+  color: #ffde59;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  font-size: .7rem;
+  width: 100%;
+  opacity: .7;
+  padding-left: 1rem;
+}
+
+#brownwest-branding img {
+  width: 1.2em;
+  vertical-align: top;
+}
+
+#brownwest-branding a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 690px) {
   .container__heading {
     text-align: center;

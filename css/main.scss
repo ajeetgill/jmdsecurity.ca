@@ -530,6 +530,26 @@ html {
   }
 }
 
+#brownwest-branding{
+  color: #ffde59;
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  font-size: .7rem;
+  // border-top: 1px solid #ffde59;
+  width: 100%;
+  opacity: .7;
+  padding-left: 1rem;
+  img{
+    width: 1.2em;
+    vertical-align: top;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
 // ==========================  MEDIA QUERIES  =====================
 @media screen and (min-width: 690px) {
   .container {
