@@ -280,6 +280,7 @@ nav.sidenav ul span {
     border-radius: 5px;
     padding: 0.8rem;
     width: 33vw;
+    width: Max(33vw, 53vh);
   }
   header nav.sidenav ul li {
     opacity: 1;

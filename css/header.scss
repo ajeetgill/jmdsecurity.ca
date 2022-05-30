@@ -179,7 +179,6 @@ nav.sidenav {
 
 @media screen and (min-width: 650px) {
   header {
-    // width: 70vw;
     min-width: 600px;
     max-width: 1000px;
     place-items: center;
@@ -216,11 +215,11 @@ nav.sidenav {
         border-radius: 5px;
         padding: 0.8rem;
         width: 33vw;
+        width: Max(33vw, 53vh);
         
 
         li {
           opacity: 1;
-          
           &::after {
             display: none;
           }

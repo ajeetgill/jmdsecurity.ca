@@ -1,22 +1,39 @@
 // insertHTMLdialoginPage();
+/**
+ // @todo
+ * DONE: re-enable sending email
+ * DONE: some validation to only try-sending-email when all fields are present
+ * --- isValid(fieldName, fieldValue, minLength)
+ */
 
 function sendEmail() {
 
   const quoteForm = document.forms.getQuote;
   const formFields = quoteForm.elements;
 
+  const customerEmail = formFields.email.value;
+  // if (!isValid('Email', customerEmail, 5)) {
+  //   return;
+  // }
+
   const sendEmailTo = 'contact@jmdsecurity.ca';
   const sendEmailFrom = 'leads@netpe.in';
   const customerName = formFields.name.value;
-  const customerEmail = formFields.email.value;
   const customerPhoneNumber = formFields.phone.value;
   const emailSubject = `Quote Request from : ${customerName}`;
+  const customerMsg = formFields.comment.value;
+
+
+  if (!isValid('Email', customerEmail, 5) || !isValid('Phone Number', customerPhoneNumber, 6) || !isValid('Message', customerMsg, 2)) {
+    return;
+  }
+
   const emailBody = `
   ${customerName}<br>
   ${customerPhoneNumber}<br>
   ${customerEmail}<br><br>
   Message:<br>
-  ${formFields.comment.value}
+  ${customerMsg}
   `;
   /**
    * I've got two solutions for form submission
@@ -63,4 +80,17 @@ function sendEmail() {
       // } : () => analytics.logEvent('form_submission', { 'status': 'fail' });
     }
   );
+}
+
+function isValid(field, fieldValue, minLength) {
+  // console.log(`Chking : ${field} : val = ${fieldValue} : minLen = ${minLength}`);
+  if (fieldValue.length < minLength) {
+    if (fieldValue.length == 0) {
+      swal(`${field} Missing!`, '', "error");
+    } else {
+      swal(`Invalid ${field}!`, `${fieldValue} \n is not a valid`, "error");
+    }
+    return false;
+  }
+  return true;
 }
